@@ -1,6 +1,6 @@
 FROM gradle:8.5.0-jdk21-alpine as builder
 WORKDIR /app
-COPY src /app/.
+COPY . /app/.
 RUN gradle clean build -i --stacktrace
 
 FROM eclipse-temurin:21-jre-alpine
